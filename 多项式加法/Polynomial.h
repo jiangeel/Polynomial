@@ -20,7 +20,7 @@ public:
 	Polynomial(const int a[][2], const unsigned &len);//用一个二维数组初始化多项式链表
 	Polynomial(const Polynomial &pm);
 	void display();//打印多项式
-	Polynomial operator+( const Polynomial & pm);//重载+号,实现多项式求和
+	Polynomial &operator+( const Polynomial & pm);//重载+号,实现多项式求和
 	void operator=(const Polynomial &pm);//重载=号
 	void sort();//将多项式按次数降序排列
 	~Polynomial();

@@ -88,9 +88,11 @@ void Polynomial::display()
 }
 
 //重载+号实现两个按幂次降序的多项式求和,如未排序可先用sort()
-Polynomial  Polynomial::operator+(const Polynomial & pm)
+Polynomial  &Polynomial::operator+(const Polynomial & pm)
 {
-	//F和G做为两个原多项式求和,返回修改后的F
+	//F和G做为两个原多项式求和
+	//将G插入到F,返回修改后的F
+	myDegree = myDegree > pm.myDegree ? myDegree : pm.myDegree;//阶取大的
 	Polynomial G = pm;	//拷贝一份防止破坏原多项式
 	list<Node>::iterator iF = myTerm.begin();
 	list<Node>::iterator iG=G.myTerm.begin();
