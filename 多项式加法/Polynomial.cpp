@@ -83,7 +83,7 @@ void Polynomial::display()
 		}
 
 	}
-
+	cout.unsetf(ios::showpos);
 	cout <<"     degree: "<<myDegree<< endl;
 }
 
